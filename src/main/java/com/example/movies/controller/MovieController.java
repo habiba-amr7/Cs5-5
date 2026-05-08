@@ -15,7 +15,6 @@ public class MovieController {
         this.movieRepository = movieRepository;
     }
 
-    // Public: anyone can see and search movies
     @GetMapping("/api/movies")
     public List<Movie> getMovies(@RequestParam(required = false) String search) {
         if (search == null || search.trim().isEmpty()) {
