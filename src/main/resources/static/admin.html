@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Movie<span>Hub</span></div>
+    <nav id="mainNav"></nav>
+</header>
+
+<main class="admin-layout page-top">
+    <section class="form-card">
+        <h1>Admin Panel</h1>
+        <p class="muted">Add, update, find, and delete films.</p>
+
+        <input type="hidden" id="movieId">
+        <label>Title</label>
+        <input id="title" type="text" placeholder="Movie title">
+
+        <label>Genre</label>
+        <input id="genre" type="text" placeholder="Action, Drama, Comedy...">
+
+        <label>Release Year</label>
+        <input id="releaseYear" type="number" placeholder="2026">
+
+        <label>Description</label>
+        <textarea id="description" placeholder="Short description"></textarea>
+
+        <label>Poster Image URL</label>
+        <input id="posterUrl" type="text" placeholder="https://image-url">
+
+        <label>Video / Trailer URL</label>
+        <input id="videoUrl" type="text" placeholder="https://www.youtube.com/embed/...">
+
+        <div class="button-row">
+            <button onclick="saveMovie()">Save Movie</button>
+            <button class="secondary" onclick="clearForm()">Clear</button>
+        </div>
+    </section>
+
+    <section class="table-card">
+        <div class="table-header">
+            <h2>Movie List</h2>
+            <div class="search-box small">
+                <input id="adminSearch" type="text" placeholder="Find movie...">
+                <button onclick="loadAdminMovies()">Find</button>
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Year</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="moviesTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+<script>
+    loadAdminMovies();
+</script>
+</body>
+</html>

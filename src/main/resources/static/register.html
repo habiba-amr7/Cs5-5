@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Movie<span>Hub</span></div>
+    <nav id="mainNav"></nav>
+</header>
+
+<main class="auth-page">
+    <section class="auth-card">
+        <h1>Register</h1>
+        <p class="muted">Create a normal USER account. Admin account is created by the system.</p>
+
+        <label>Username</label>
+        <input id="username" type="text" placeholder="Enter username">
+
+        <label>Password</label>
+        <input id="password" type="password" placeholder="Enter password">
+
+        <button onclick="register()">Register</button>
+        <p id="message" class="message"></p>
+
+        <p class="muted">Already have account? <a href="login.html">Login</a></p>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

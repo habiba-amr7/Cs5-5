@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Movie<span>Hub</span></div>
+    <nav id="mainNav"></nav>
+</header>
+
+<section class="hero">
+    <div>
+        <p class="tag">Simple movie website</p>
+        <h1>Watch trailers, search films, and save your favorites.</h1>
+        <p class="hero-text">A clean frontend connected to a Spring Boot backend.</p>
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search movie by title...">
+            <button onclick="searchMovies()">Search</button>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    <h2>Movies</h2>
+    <div id="moviesGrid" class="movies-grid"></div>
+</main>
+
+<div id="watchModal" class="modal hidden">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeWatchModal()">×</button>
+        <h2 id="modalTitle"></h2>
+        <iframe id="movieFrame" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

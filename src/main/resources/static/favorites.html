@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites - MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Movie<span>Hub</span></div>
+    <nav id="mainNav"></nav>
+</header>
+
+<main class="container page-top">
+    <h1>Your Favorites</h1>
+    <p class="muted">Saved in database for the logged in user.</p>
+    <div id="moviesGrid" class="movies-grid"></div>
+</main>
+
+<div id="watchModal" class="modal hidden">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeWatchModal()">×</button>
+        <h2 id="modalTitle"></h2>
+        <iframe id="movieFrame" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+    loadFavoritesPage();
+</script>
+</body>
+</html>

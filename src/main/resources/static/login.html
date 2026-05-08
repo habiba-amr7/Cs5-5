@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Movie<span>Hub</span></div>
+    <nav id="mainNav"></nav>
+</header>
+
+<main class="auth-page">
+    <section class="auth-card">
+        <h1>Login</h1>
+        <p class="muted">Login as admin or user.</p>
+
+        <label>Username</label>
+        <input id="username" type="text" placeholder="admin or user">
+
+        <label>Password</label>
+        <input id="password" type="password" placeholder="admin123 or user123">
+
+        <button onclick="login()">Login</button>
+        <p id="message" class="message"></p>
+
+        <p class="muted">No account? <a href="register.html">Create user account</a></p>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

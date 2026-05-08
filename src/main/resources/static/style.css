@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #10131c;
+    color: #ffffff;
+}
+
+.navbar {
+    height: 72px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(16, 19, 28, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffcc33;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-weight: 600;
+}
+
+nav a:hover,
+.admin-link {
+    color: #ffcc33;
+}
+
+.hero {
+    min-height: 420px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    background:
+            linear-gradient(90deg, rgba(16, 19, 28, 0.98), rgba(16, 19, 28, 0.68)),
+            url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1600") center/cover;
+}
+
+.hero h1 {
+    max-width: 720px;
+    font-size: 52px;
+    line-height: 1.08;
+    margin: 10px 0;
+}
+
+.tag {
+    color: #ffcc33;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero-text,
+.muted {
+    color: #b9c0d4;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    max-width: 620px;
+    margin-top: 25px;
+}
+
+.search-box input,
+.form-card input,
+.form-card textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    background: #ffffff;
+    color: #111111;
+}
+
+.search-box button,
+button {
+    border: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: #ffcc33;
+    color: #111111;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+.secondary {
+    background: #2b3144;
+    color: white;
+}
+
+.danger {
+    background: #ff4d4d;
+    color: white;
+}
+
+.container {
+    padding: 40px 7%;
+}
+
+.page-top {
+    padding-top: 60px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.movie-card {
+    background: #191e2c;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-info {
+    padding: 18px;
+}
+
+.movie-info h3 {
+    margin: 0 0 8px;
+}
+
+.movie-meta {
+    color: #ffcc33;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.movie-description {
+    color: #c8cee0;
+    font-size: 14px;
+    min-height: 58px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 11px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 50;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    width: min(900px, 100%);
+    background: #191e2c;
+    padding: 22px;
+    border-radius: 18px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 480px;
+    border: none;
+    border-radius: 14px;
+    margin-top: 12px;
+}
+
+.admin-layout {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 24px;
+}
+
+.form-card,
+.table-card {
+    background: #191e2c;
+    border-radius: 18px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.form-card label {
+    display: block;
+    margin: 15px 0 7px;
+    color: #d8def1;
+    font-weight: bold;
+}
+
+.form-card textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box.small {
+    margin-top: 0;
+    max-width: 360px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+th {
+    color: #ffcc33;
+}
+
+td button {
+    padding: 9px 12px;
+    margin-right: 6px;
+}
+
+@media (max-width: 850px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .search-box,
+    .table-header,
+    .admin-layout {
+        display: block;
+    }
+
+    .search-box button,
+    .button-row button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .form-card {
+        margin-bottom: 24px;
+    }
+}
+
+.auth-page {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 7%;
+    background:
+            linear-gradient(90deg, rgba(16, 19, 28, 0.96), rgba(16, 19, 28, 0.84)),
+            url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=1600") center/cover;
+}
+
+.auth-card {
+    width: min(430px, 100%);
+    background: #191e2c;
+    border-radius: 20px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+.auth-card label {
+    display: block;
+    margin: 18px 0 7px;
+    color: #d8def1;
+    font-weight: bold;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+}
+
+.auth-card button {
+    width: 100%;
+    margin-top: 22px;
+}
+
+.auth-card a {
+    color: #ffcc33;
+}
+
+.message {
+    color: #ffcc33;
+    min-height: 22px;
+}
+
+.welcome {
+    color: #b9c0d4;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+.nav-button {
+    padding: 9px 13px;
+    margin-left: 14px;
+    border-radius: 10px;
+}
