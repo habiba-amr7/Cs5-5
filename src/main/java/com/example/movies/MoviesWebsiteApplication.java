@@ -1,5 +1,9 @@
 package com.example.movies;
 
+import com.example.movies.model.AppUser;
+import com.example.movies.model.Movie;
+import com.example.movies.repository.AppUserRepository;
+import com.example.movies.repository.MovieRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
